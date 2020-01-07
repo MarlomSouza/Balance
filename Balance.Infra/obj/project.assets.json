@@ -1474,6 +1474,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Threading.ThreadPool.dll": {}
         }
+      },
+      "Balance.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Balance.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Balance.Domain.dll": {}
+        }
       }
     }
   },
@@ -5259,38 +5269,56 @@
         "system.threading.threadpool.4.3.0.nupkg.sha512",
         "system.threading.threadpool.nuspec"
       ]
+    },
+    "Balance.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Balance.Domain/Balance.Domain.csproj",
+      "msbuildProject": "../Balance.Domain/Balance.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Balance.Domain >= 1.0.0",
+      "MongoDB.Driver >= 2.10.0",
       "NETStandard.Library >= 2.0.3",
       "mongocsharpdriver >= 2.10.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Marlom\\.nuget\\packages\\": {}
+    "C:\\Users\\222406\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\Balance\\Balance.Infra\\Balance.Infra.csproj",
+      "projectUniqueName": "C:\\Users\\222406\\Projeto\\Balance\\Balance.Infra\\Balance.Infra.csproj",
       "projectName": "Balance.Infra",
-      "projectPath": "D:\\Projetos\\Balance\\Balance.Infra\\Balance.Infra.csproj",
-      "packagesPath": "C:\\Users\\Marlom\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\Balance\\Balance.Infra\\obj\\",
+      "projectPath": "C:\\Users\\222406\\Projeto\\Balance\\Balance.Infra\\Balance.Infra.csproj",
+      "packagesPath": "C:\\Users\\222406\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\222406\\Projeto\\Balance\\Balance.Infra\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Marlom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\222406\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nexus.dc.sbnet/repository/nuget-hosted": {}
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\222406\\Projeto\\Balance\\Balance.Domain\\Balance.Domain.csproj": {
+              "projectPath": "C:\\Users\\222406\\Projeto\\Balance\\Balance.Domain\\Balance.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5302,6 +5330,10 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "MongoDB.Driver": {
+            "target": "Package",
+            "version": "[2.10.0, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",

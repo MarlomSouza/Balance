@@ -1,26 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\Balance\\Balance.Domain\\Balance.Domain.csproj": {}
+    "C:\\Users\\222406\\Projeto\\Balance\\Balance.Domain\\Balance.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\Balance\\Balance.Domain\\Balance.Domain.csproj": {
+    "C:\\Users\\222406\\Projeto\\Balance\\Balance.Domain\\Balance.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\Balance\\Balance.Domain\\Balance.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\222406\\Projeto\\Balance\\Balance.Domain\\Balance.Domain.csproj",
         "projectName": "Balance.Domain",
-        "projectPath": "D:\\Projetos\\Balance\\Balance.Domain\\Balance.Domain.csproj",
-        "packagesPath": "C:\\Users\\Marlom\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\Balance\\Balance.Domain\\obj\\",
+        "projectPath": "C:\\Users\\222406\\Projeto\\Balance\\Balance.Domain\\Balance.Domain.csproj",
+        "packagesPath": "C:\\Users\\222406\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\222406\\Projeto\\Balance\\Balance.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Marlom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\222406\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexus.dc.sbnet/repository/nuget-hosted": {}
         },
         "frameworks": {
           "netstandard2.0": {
