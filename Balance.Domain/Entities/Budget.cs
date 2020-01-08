@@ -33,7 +33,7 @@ namespace Balance.Domain.Entities
                 .When((value < 1 || value > 9999999), "The value should be between than 1 and 9999999");
 
             DomainValidator.New()
-                .When((month < 1 || month > 9999999), "The month has to be between 1 and 12");
+                .When((month < 1 || month > 12), "The month has to be between 1 and 12");
 
             DomainValidator.New()
                 .When(year > DateTime.Now.Year - 1, "The should be greater than" + (DateTime.Now.Year - 1));
