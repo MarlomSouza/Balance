@@ -8,22 +8,22 @@ namespace Balance.Domain.Entities
         public decimal Value { get; private set; }
         public int Month { get; private set; }
         public int Year { get; private set; }
-        public string UserName { get; private set; }
+        public User User { get; private set; }
         public TypeBudget TypeBudget { get; private set; }
 
-        public Budget(string description, decimal value, int month, int year, string userName, TypeBudget typeBudget)
+        public Budget(string description, decimal value, int month, int year, User user, TypeBudget typeBudget)
         {
-            Validade(description, value, month, year, userName);
+            Validade(description, value, month, year, user);
 
             Description = description;
             Value = value;
             Month = month;
             Year = year;
-            UserName = userName;
+            User = user;
             TypeBudget = typeBudget;
         }
 
-        private static void Validade(string description, decimal value, int month, int year, string userName)
+        private static void Validade(string description, decimal value, int month, int year, User user)
         {
             DomainValidator.New()
                 .When(string.IsNullOrWhiteSpace(description), "It's necessary to inform the description")
@@ -36,11 +36,10 @@ namespace Balance.Domain.Entities
                 .When((month < 1 || month > 12), "The month has to be between 1 and 12");
 
             DomainValidator.New()
-                .When(year > DateTime.Now.Year - 1, "The should be greater than" + (DateTime.Now.Year - 1));
+                .When(year < DateTime.Now.Year - 1, "The should be greater than " + (DateTime.Now.Year - 1));
 
             DomainValidator.New()
-                .When(string.IsNullOrWhiteSpace(userName), "It's necessary to inform the user name.")
-                .When(description.Length > 25, "The maximum allowed for the user name is 25 characters.");
+                .When(user == null, "It's necessary to inform the user");
         }
     }
 }

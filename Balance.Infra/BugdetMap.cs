@@ -10,7 +10,7 @@ namespace Balance.Infra
             BsonClassMap.RegisterClassMap<Budget>(cm =>
             {
                 cm.AutoMap();
-                cm.MapIdMember(x => x.Id);
+                cm.MapIdProperty(x => x.Id);
                 cm.MapMember(x => x.Description).SetIsRequired(true);
                 cm.MapMember(x => x.Month).SetIsRequired(true);
                 cm.MapMember(x => x.Year).SetIsRequired(true);

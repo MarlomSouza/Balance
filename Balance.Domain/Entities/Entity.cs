@@ -1,9 +1,10 @@
+using System;
+
 namespace Balance.Domain.Entities
 {
     public abstract class Entity<T>
     {
-        public int Id { get; protected set; }
-
+        public string Id { get; protected set; } = Guid.NewGuid().ToString();
 
     }
 }
