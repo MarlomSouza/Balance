@@ -6,24 +6,22 @@ namespace Balance.Domain.Entities
     {
         public string Description { get; private set; }
         public decimal Value { get; private set; }
-        public int Month { get; private set; }
-        public int Year { get; private set; }
+        public DateTime DateTime { get; private set; }
         public User User { get; private set; }
         public TypeBudget TypeBudget { get; private set; }
 
-        public Budget(string description, decimal value, int month, int year, User user, TypeBudget typeBudget)
+        public Budget(string description, decimal value, DateTime date, TypeBudget typeBudget, User user)
         {
-            Validade(description, value, month, year, user);
+            Validade(description, value, date, user);
 
             Description = description;
             Value = value;
-            Month = month;
-            Year = year;
-            User = user;
+            DateTime = date;
             TypeBudget = typeBudget;
+            User = user;
         }
 
-        private static void Validade(string description, decimal value, int month, int year, User user)
+        private static void Validade(string description, decimal value, DateTime date, User user)
         {
             DomainValidator.New()
                 .When(string.IsNullOrWhiteSpace(description), "It's necessary to inform the description")
@@ -33,13 +31,10 @@ namespace Balance.Domain.Entities
                 .When((value < 1 || value > 9999999), "The value should be between than 1 and 9999999");
 
             DomainValidator.New()
-                .When((month < 1 || month > 12), "The month has to be between 1 and 12");
+                .When(date < DateTime.Now.AddYears(-1), "The should be greater than " + DateTime.Now.AddYears(-1));
 
             DomainValidator.New()
-                .When(year < DateTime.Now.Year - 1, "The should be greater than " + (DateTime.Now.Year - 1));
-
-            DomainValidator.New()
-                .When(user == null, "It's necessary to inform the user");
+                .When(user == null, "User is inválid");
         }
     }
 }

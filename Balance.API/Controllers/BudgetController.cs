@@ -14,21 +14,23 @@ namespace Balance.API.Controllers
     public class BudgetController : ControllerBase
     {
         private readonly BudgetService _service;
-        private readonly IConfiguration _configuration;
 
-        public BudgetController(BudgetService budgetService, IConfiguration configuration)
+        public BudgetController(BudgetService budgetService)
         {
             _service = budgetService;
-            _configuration = configuration;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Budget>> GetAsync() => await _service.FindAll();
+        public async Task<IEnumerable<Budget>> GetAsync() => await _service.GetAllAsync();
 
         [HttpGet("{id}")]
-        public async Task<Budget> GetAsync(string id) => await _service.FindByIdAsync(id);
+        public async Task<Budget> GetAsync(string id) => await _service.GetByIdAsync(id);
 
         [HttpPost]
-        public void Post(BudgetDto dto) => _service.Add(dto);
+        public async Task<IActionResult> PostAsync(BudgetDto dto)
+        {
+            await _service.AddAsync(dto);
+            return Created("", dto);
+        }
     }
 }

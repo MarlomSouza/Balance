@@ -17,7 +17,7 @@ namespace Balance.Domain.VOs
         {
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             Match match = regex.Match(address);
-            DomainValidator.New().When(match.Success, "Email address is incorrect");
+            DomainValidator.New().When(!match.Success, "Email address is incorrect");
         }
     }
 }

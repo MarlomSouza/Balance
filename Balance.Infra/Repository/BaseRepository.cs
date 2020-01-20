@@ -5,16 +5,17 @@ using Balance.Domain.Base;
 using Balance.Domain.Entities;
 using MongoDB.Driver;
 
-namespace Balance.Infra
+namespace Balance.Infra.Repository
 {
     public class BaseRepository<TEntity> : IRepository<TEntity> where TEntity : Entity<TEntity>
     {
         protected readonly IMongoContext<TEntity> _context;
-        private readonly IMongoCollection<TEntity> _collection;
+
+        protected readonly IMongoCollection<TEntity> _collection;
         public BaseRepository(IMongoContext<TEntity> context)
         {
             _context = context;
-            _collection = _context.Collection<TEntity>();
+            _collection = _context.Collection;
         }
         public async Task<TEntity> GetByIdAsync(string id) => await _collection.Find(x => x.Id == id).FirstOrDefaultAsync();
 

@@ -28,3 +28,6 @@ C:\Users\222406\Projeto\Balance\Balance.API\obj\Debug\netcoreapp3.1\Balance.API.
 C:\Users\222406\Projeto\Balance\Balance.API\obj\Debug\netcoreapp3.1\Balance.API.csproj.CopyComplete
 C:\Users\222406\Projeto\Balance\Balance.API\obj\Debug\netcoreapp3.1\Balance.API.dll
 C:\Users\222406\Projeto\Balance\Balance.API\obj\Debug\netcoreapp3.1\Balance.API.pdb
+C:\Users\222406\Projeto\Balance\Balance.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\222406\Projeto\Balance\Balance.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\222406\Projeto\Balance\Balance.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
