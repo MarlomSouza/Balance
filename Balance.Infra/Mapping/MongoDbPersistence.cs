@@ -6,6 +6,7 @@ namespace Balance.Infra.Mapping
         public static void Configure()
         {
             BugdetMap.Map();
+            UserMap.Map();
         }
     }
 }
