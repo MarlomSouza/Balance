@@ -1,8 +1,0 @@
-C:\Users\222406\Projeto\Balance\Balance.Domain\obj\Debug\netstandard2.0\Balance.Domain.csprojAssemblyReference.cache
-C:\Users\222406\Projeto\Balance\Balance.Domain\obj\Debug\netstandard2.0\Balance.Domain.AssemblyInfoInputs.cache
-C:\Users\222406\Projeto\Balance\Balance.Domain\obj\Debug\netstandard2.0\Balance.Domain.AssemblyInfo.cs
-C:\Users\222406\Projeto\Balance\Balance.Domain\bin\Debug\netstandard2.0\Balance.Domain.deps.json
-C:\Users\222406\Projeto\Balance\Balance.Domain\bin\Debug\netstandard2.0\Balance.Domain.dll
-C:\Users\222406\Projeto\Balance\Balance.Domain\bin\Debug\netstandard2.0\Balance.Domain.pdb
-C:\Users\222406\Projeto\Balance\Balance.Domain\obj\Debug\netstandard2.0\Balance.Domain.dll
-C:\Users\222406\Projeto\Balance\Balance.Domain\obj\Debug\netstandard2.0\Balance.Domain.pdb
